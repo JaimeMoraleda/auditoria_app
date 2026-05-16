@@ -61,6 +61,8 @@ auditoria_app/
 │
 └── audit/
 
+````
+
 Funcionalidades implementadas
 Gestión de profesores
 Crear profesores
@@ -93,23 +95,25 @@ Las asignaturas soportan múltiples idiomas mediante PostgreSQL JSONB.
 
 Ejemplo:
 
+
+```text
 {
   "es": "Bases de Datos",
   "en": "Databases",
   "fr": "Bases de données"
 }
-
-Consultas usando:
-
-nombres ->> 'es'
+````
 Índices implementados
-
+---
 Se utilizan índices para optimizar búsquedas:
 
 Índices GIN sobre JSONB
 Índices trigram (pg_trgm)
 Índices sobre relaciones y matrículas
+
+---
 Requisitos
+---
 Python 3.11+
 PostgreSQL 15+
 pgAdmin (opcional)
