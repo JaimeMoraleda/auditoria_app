@@ -1,0 +1,87 @@
+<h1>Alumnos</h1>
+
+<h2>Filtros</h2>
+
+<form method="GET"
+      action="/alumnos">
+
+<input name="nombre"
+       placeholder="Buscar nombre">
+
+<input name="dinero"
+       placeholder="Dinero minimo">
+
+<input name="limit"
+       placeholder="Limit"
+       value="5">
+
+<input name="offset"
+       placeholder="Offset"
+       value="0">
+
+<button>
+Buscar
+</button>
+
+</form>
+
+<hr>
+
+<form method="POST"
+      action="/alumno/add">
+
+<input name="nombre"
+       placeholder="Nombre alumno">
+
+<input name="dinero"
+       placeholder="Dinero">
+
+<input name="email"
+       placeholder="Email">
+
+<button>
+Agregar
+</button>
+
+</form>
+
+<hr>
+
+<ul>
+
+{% for a in alumnos %}
+
+<li>
+
+<form method="POST"
+      action="/alumno/update/{{a[0]}}"
+      style="display:inline;">
+
+<input name="nombre"
+       value="{{a[1]}}">
+
+<input name="email"
+       value="{{a[2]}}">
+
+<input name="dinero"
+       value="{{a[3]}}">
+
+<button>
+Modificar
+</button>
+
+</form>
+
+<a href="/alumno/delete/{{a[0]}}">
+Borrar
+</a>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+<a href="/">
+Volver
+</a>

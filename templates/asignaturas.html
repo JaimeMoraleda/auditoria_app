@@ -1,0 +1,87 @@
+<h1>Asignaturas</h1>
+
+<h2>Filtros</h2>
+
+<form method="GET"
+      action="/asignaturas">
+
+<input name="nombre"
+       placeholder="Buscar nombre">
+
+<input name="precio"
+       placeholder="Precio maximo">
+
+<input name="limit"
+       placeholder="Limit"
+       value="5">
+
+<input name="offset"
+       placeholder="Offset"
+       value="0">
+
+<button>
+Buscar
+</button>
+
+</form>
+
+<hr>
+
+<form method="POST"
+      action="/asignatura/add">
+
+<input name="nombre"
+       placeholder="Nombre asignatura">
+
+<input name="precio"
+       placeholder="Precio">
+
+<input name="max_alumnos"
+       placeholder="Max alumnos">
+
+<button>
+Agregar
+</button>
+
+</form>
+
+<hr>
+
+<ul>
+
+{% for a in asignaturas %}
+
+<li>
+
+<form method="POST"
+      action="/asignatura/update/{{a[0]}}"
+      style="display:inline;">
+
+<input name="nombre"
+       value="{{a[1]}}">
+
+<input name="precio"
+       value="{{a[2]}}">
+
+<input name="max_alumnos"
+       value="{{a[3]}}">
+
+<button>
+Modificar
+</button>
+
+</form>
+
+<a href="/asignatura/delete/{{a[0]}}">
+Borrar
+</a>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+<a href="/">
+Volver
+</a>

@@ -1,0 +1,48 @@
+<h1>Profesores</h1>
+
+<form method="POST"
+      action="/profesor/add">
+
+<input name="nombre"
+       placeholder="Nombre profesor">
+
+<button>
+Agregar
+</button>
+
+</form>
+
+<hr>
+
+<ul>
+
+{% for p in profesores %}
+
+<li>
+
+<form method="POST"
+      action="/profesor/update/{{p[0]}}"
+      style="display:inline;">
+
+<input name="nombre"
+       value="{{p[1]}}">
+
+<button>
+Modificar
+</button>
+
+</form>
+
+<a href="/profesor/delete/{{p[0]}}">
+Borrar
+</a>
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+<a href="/">
+Volver
+</a>

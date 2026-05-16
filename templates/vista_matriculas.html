@@ -1,0 +1,35 @@
+<h1>Vista Matrículas</h1>
+
+<table border="1">
+
+<tr>
+
+<th>Alumno</th>
+
+<th>Profesor</th>
+
+<th>Asignatura</th>
+
+</tr>
+
+{% for d in datos %}
+
+<tr>
+
+<td>{{d[0]}}</td>
+
+<td>{{d[1]}}</td>
+
+<td>{{d[2]}}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">
+Volver
+</a>

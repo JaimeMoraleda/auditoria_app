@@ -1,0 +1,84 @@
+<h1>Matriculación</h1>
+
+<h2>Filtros</h2>
+
+<form method="GET"
+      action="/matriculas">
+
+<input name="fecha"
+       placeholder="Fecha">
+
+<input name="limit"
+       placeholder="Limit"
+       value="5">
+
+<input name="offset"
+       placeholder="Offset"
+       value="0">
+
+<button>
+Buscar
+</button>
+
+</form>
+
+<hr>
+
+<form method="POST"
+      action="/matricula/add">
+
+<select name="alumno_id">
+
+{% for a in alumnos %}
+
+<option value="{{a[0]}}">
+{{a[1]}} - Dinero: {{a[3]}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<select name="asignatura_id">
+
+{% for s in asignaturas %}
+
+<option value="{{s[0]}}">
+{{s[1]}} - Precio: {{s[2]}}
+- Max: {{s[3]}}
+</option>
+
+{% endfor %}
+
+</select>
+
+<button>
+Matricular
+</button>
+
+</form>
+
+<hr>
+
+<h2>Matrículas realizadas</h2>
+
+<ul>
+
+{% for m in matriculas %}
+
+<li>
+
+{{m[1]}}
+→
+{{m[2]}}
+({{m[3]}})
+
+</li>
+
+{% endfor %}
+
+</ul>
+
+<a href="/">
+Volver
+</a>
