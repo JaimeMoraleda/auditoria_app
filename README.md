@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Auditoria App — Flask + PostgreSQL
 
 Aplicación web desarrollada con Flask y PostgreSQL para la gestión académica de:
@@ -35,7 +34,6 @@ Incluye funcionalidades avanzadas de bases de datos como auditoría, transaccion
 - Asignaturas
 - Matrículas
 
-<<<<<<< HEAD
 El proyecto incluye:
 
 - Arquitectura MVC
@@ -184,7 +182,6 @@ Las asignaturas almacenan nombres en varios idiomas utilizando JSONB.
 Ejemplo:
 
 ```json
->>>>>>> 3bf4a6f (Añadido soporte GIS, PostGIS y mapa interactivo)
 {
   "es": "Bases de Datos",
   "en": "Databases",
