@@ -1,35 +1,85 @@
-<h1>Sistema Auditoría</h1>
+<!DOCTYPE html>
+<html lang="es">
 
-<hr>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Académico</title>
 
-<ul>
+    <style>
 
-<li>
-<a href="/profesores">
-Profesores
-</a>
-</li>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
 
-<li>
-<a href="/alumnos">
-Alumnos
-</a>
-</li>
+        h1 {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
 
-<li>
-<a href="/asignaturas">
-Asignaturas
-</a>
-</li><li>
-<a href="/matriculas">
-Matriculas
-</a>
-</li>
+        .container {
+            margin-top: 40px;
+        }
 
-<li>
-<a href="/vista_matriculas">
-Vista Matriculas
-</a>
-</li>
+        .boton {
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
 
-</ul>
+        .boton:hover {
+            background-color: #0056b3;
+        }
+
+        .descripcion {
+            margin-top: 40px;
+            font-size: 18px;
+            color: #555;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Sistema Académico con PostgreSQL</h1>
+
+    <div class="container">
+
+        <a class="boton" href="/alumnos">
+            👨‍🎓 Alumnos
+        </a>
+
+        <a class="boton" href="/profesores">
+            👨‍🏫 Profesores
+        </a>
+
+        <a class="boton" href="/asignaturas">
+            📚 Asignaturas
+        </a>
+
+        <a class="boton" href="/matriculas">
+            📝 Matrículas
+        </a>
+
+        <a class="boton" href="/mapa">
+            🌍 Ver mapa GIS
+        </a>
+
+    </div>
+
+</body>
+
+</html>
